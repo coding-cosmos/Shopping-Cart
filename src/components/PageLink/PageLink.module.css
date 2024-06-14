@@ -1,0 +1,21 @@
+.linkbtn{
+    text-decoration: none;
+    padding: .75em 1.5em;
+  
+    border-radius: .75rem;
+    font-size: 1.125rem;
+
+    color: black;
+    border: 2px solid black;
+}   
+
+.linkbtn:hover,.linkbtn:focus{
+    opacity: .75;
+}
+
+.linkbtn_active{
+    composes: linkbtn;
+   
+    background-color: black;
+    color: white;
+}
