@@ -16,7 +16,7 @@ const PageLink = ({ route, name,active }) => {
 PageLink.propTypes = {
   route: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  active: PropTypes.string,
+  active: PropTypes.bool,
 };
 
 export default PageLink;
