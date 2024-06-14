@@ -2,7 +2,6 @@ import { useLocation } from "react-router-dom";
 import CartButton from "../CartButton/CartButton";
 import PageLink from "../PageLink/PageLink";
 import styles from "./Nav.module.css";
-import PropType from 'prop-types';
 
 const Nav = () => {
   const location = useLocation();
@@ -22,9 +21,6 @@ const Nav = () => {
   );
 };
 
-Nav.propTypes = {
-    page: PropType.string.isRequired,
-}
 
 
 export default Nav;
