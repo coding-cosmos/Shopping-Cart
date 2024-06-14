@@ -1,0 +1,25 @@
+.container{
+    width: calc(26vh*6);
+    overflow: hidden;
+}
+
+.card_wrapper{
+    width: calc(25vh*20 + 3vh*19);
+   
+    animation-name: translate-X;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;   
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+@keyframes translate-X {
+    0%{
+        transform: translateX(0) ;
+    }
+   
+    100%{
+        transform: translateX(calc(-25vh*10 - 3vh*9));
+    }
+
+}
