@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo{
+    font-family: 'tiny5';
+    font-size: 2.5rem;
+}
+
+.links{
+    display: flex;
+    gap: 2rem;
+}
