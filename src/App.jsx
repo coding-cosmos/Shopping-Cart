@@ -5,7 +5,8 @@ import routes from "./routes";
 const router = createBrowserRouter(routes);
 
 function App() {
-  return <><RouterProvider router={router}/></>;
+  return <div className="container"
+  ><RouterProvider router={router}/></div>;
 }
 
 export default App;
