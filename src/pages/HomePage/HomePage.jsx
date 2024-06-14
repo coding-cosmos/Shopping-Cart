@@ -2,7 +2,7 @@ import Nav from "../../components/Nav/Nav";
 
 
 const Home = ()=>{
-    return <><Nav/>
+    return <><Nav page="home"/>
     </>
 };
 
