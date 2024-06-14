@@ -1,0 +1,45 @@
+.container{
+ height: 50vh;
+ width: 50vh;
+ overflow: hidden;
+ margin-left: auto;
+ border-radius: 2rem;
+}
+
+.image{
+    height: 50vh;
+    width: 50vh;
+    object-fit: cover; 
+    display: inline;  
+}
+
+.image_wrapper{
+    width: calc(10*50vh);
+    animation-name: translate-X;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;   
+    animation-timing-function: ease-in-out; 
+    animation-delay: 1s;
+}
+
+@keyframes translate-X {
+    0%{
+        transform: translateX(0) ;
+    }
+    20%{
+        transform:translateX(calc(-50vh*1));
+    }
+    40%{
+         transform:translateX(calc(-50vh*2)); 
+    }
+    60%{
+         transform:translateX(calc(-50vh*3)); 
+    }
+    80%{
+         transform:translateX(calc(-50vh*4)); 
+    }
+    100%{
+        transform: translateX(calc(-50vh*5));
+    }
+
+}
