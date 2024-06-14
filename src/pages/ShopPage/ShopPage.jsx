@@ -1,8 +1,10 @@
+import { Outlet } from "react-router-dom";
 import Nav from "../../components/Nav/Nav";
 
 
 const ShopPage = ()=>{
-    return <><Nav page="shop"/>
+    return <><Nav/>
+    <Outlet/>
     </>
 };
 

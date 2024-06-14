@@ -1,8 +1,11 @@
 import Nav from "../../components/Nav/Nav";
+import { Outlet } from "react-router-dom";
 
 
 const Home = ()=>{
-    return <><Nav page="home"/>
+    return <>
+    <Nav/>
+    <Outlet/>
     </>
 };
 
