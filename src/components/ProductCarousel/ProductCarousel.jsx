@@ -1,25 +1,27 @@
-import { useEffect,useState } from "react";
 import styles from "./ProductCarousel.module.css";
 import ImageCard from "../ImageCard/ImageCard";
-const ProductCarousel = ()=>{
-    const [products,setProducts] = useState(null);
-    const [loading, setLoading] = useState(true);
+import useProductData from "../../scripts/utils";
 
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products?limit=10')
-            .then(res=>res.json())
-            .then(products => setProducts(products))
-            .finally(()=> setLoading(false));
-    },[]);
+const ProductCarousel = () => {
+  const { productData, error, loading } = useProductData();
 
-    if(loading) return "loading";
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>A network error was encountered</p>;
 
-    return <><div className={styles.container}>
+  return (
+    <>
+      <div className={styles.container}>
         <div className={styles.card_wrapper}>
-           {products.map((element,index)=>{return <ImageCard url={element.image} key={index}/>})}
-           {products.map((element,index)=>{return <ImageCard url={element.image} key={index}/>})}
+          {productData.map((element, index) => {
+            return <ImageCard url={element.image} key={index} />;
+          })}
+          {productData.map((element, index) => {
+            return <ImageCard url={element.image} key={index} />;
+          })}
         </div>
-        </div></>
+      </div>
+    </>
+  );
 };
 
 export default ProductCarousel;
