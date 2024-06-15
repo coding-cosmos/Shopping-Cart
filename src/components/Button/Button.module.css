@@ -1,0 +1,14 @@
+.btn {
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: default;
+}
+
+.link{
+    text-decoration: none;
+}
+
