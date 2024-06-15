@@ -1,0 +1,13 @@
+.main__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products {
+  padding: 2em;
+}
+
+.heading {
+  font-family: "tiny5", "sans-serif";
+  font-size: 2.5rem;
+}
