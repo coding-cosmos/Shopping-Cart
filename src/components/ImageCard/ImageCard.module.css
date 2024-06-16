@@ -1,13 +1,12 @@
-.image{
-    height: 25vh;
-    width: 25vh;
-    object-fit: contain;
-    border: 2px solid black;
-    border-radius: 2rem;
-    padding: 1em;
-    /* margin-left: 1em; */
+.image {
+  height: 25vmin;
+  width: 25vmin;
+  object-fit: contain;
+  border: 2px solid black;
+  border-radius: 2rem;
+  padding: 1em;
 }
 
-.image+.image{
-    margin-left:3vh;
+.image + .image {
+  margin-left: 3vmin;
 }
