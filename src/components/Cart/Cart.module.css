@@ -1,0 +1,51 @@
+.cart {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 2rem;
+  align-items: flex-start;
+  background-color: ghostwhite;
+  border-radius: 1.25rem;
+}
+
+.wrapper {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+.close {
+  border: 2px solid black;
+  padding: 0.25em 0.5em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.heading {
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: "tiny5", "sans-serif";
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.receipt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+.receipt_field {
+  display: flex;
+  justify-content: space-between;
+}
+.receipt_total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  padding-top: 1rem;
+}
