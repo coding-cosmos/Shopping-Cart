@@ -1,13 +1,11 @@
 .main__wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-.products {
-  padding: 2em;
+  margin-top: 2rem;
 }
 
 .heading {
   font-family: "tiny5", "sans-serif";
   font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
