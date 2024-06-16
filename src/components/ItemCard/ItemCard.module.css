@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 2rem;
+  padding: 1em;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.img {
+  object-fit: contain;
+  height: 10vh;
+  width: 10vh;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  text-wrap: nowrap;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
