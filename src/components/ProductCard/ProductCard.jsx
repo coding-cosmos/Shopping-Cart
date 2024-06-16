@@ -4,6 +4,7 @@ import QuantityCounter from "../QuantityCounter/QuantityCounter";
 import WishlistButton from "../WishlistButton/WishlistButton";
 import styles from "./ProductCard.module.css";
 import PropTypes from "prop-types";
+import { addItem } from "../../data/CartData";
 
 const ProductCard = ({ image, title, price }) => {
   const value = useRef();
@@ -20,15 +21,13 @@ const ProductCard = ({ image, title, price }) => {
   const handleAddToCart = () => {
     setAdded(true);
     const quantity = value.current.getChildValue();
-    localStorage.setItem(
-      "cart",
-      JSON.stringify({
-        title: title,
-        image: image,
-        price: price,
-        quantity: quantity,
-      })
-    );
+    const item = {
+      title: titleUpdated,
+      image: image,
+      price: price,
+      quantity: quantity,
+    };
+    addItem(item);
   };
 
   const handleWishlist = () => {
