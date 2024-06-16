@@ -1,16 +1,22 @@
 import { forwardRef, useImperativeHandle, useState } from "react";
 import styles from "./QuantityCounter.module.css";
+import PropTypes from "prop-types";
 
-const QuantityCounter = forwardRef(function QuantityCounter(props, ref) {
-  const [value, setValue] = useState(1);
+const QuantityCounter = forwardRef(function QuantityCounter(
+  { quantity = 1, onClick },
+  ref
+) {
+  const [value, setValue] = useState(quantity);
 
   const handleDecrement = () => {
     if (value - 1 > 0) {
+      onClick(value - 1);
       setValue(value - 1);
     }
   };
 
   const handleIncrement = () => {
+    onClick(value + 1);
     setValue(value + 1);
   };
 
@@ -41,5 +47,10 @@ const QuantityCounter = forwardRef(function QuantityCounter(props, ref) {
     </>
   );
 });
+
+QuantityCounter.propTypes = {
+  quantity: PropTypes.number,
+  onClick: PropTypes.func,
+};
 
 export default QuantityCounter;
